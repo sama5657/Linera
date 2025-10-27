@@ -1,14 +1,8 @@
 {
-  "buildCommand": "cd web && npm install && npm run build",
+  "buildCommand": "cd web && npm install && npm run build && npm run export",
   "outputDirectory": "web/out",
-  "framework": "nextjs",
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
-  ],
+  "framework": null,
   "env": {
-    "NEXT_PUBLIC_LINERA_GRAPHQL_ENDPOINT": "http://localhost:8080/graphql"
+    "NEXT_PUBLIC_LINERA_GRAPHQL_ENDPOINT": "@linera_endpoint"
   }
 }

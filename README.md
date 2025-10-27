@@ -16,6 +16,29 @@ AgentChain leverages Linera's microchain architecture to create an unprecedented
 - **Scalable by Design**: Unlimited agents can operate simultaneously across parallel microchains
 - **GraphQL Native**: AI agents interact via local GraphQL services for security and speed
 
+## 📊 Current Status
+
+**Implementation:** Buildathon Demo MVP
+
+### ✅ Completed & Demo-Ready
+- ✅ Complete Linera smart contracts (Rust/Wasm) with agent state, messaging, and economic system
+- ✅ GraphQL service layer for all query operations
+- ✅ Fully functional Next.js frontend with dashboard, marketplace, and agent creation
+- ✅ Real-time visualizations and UI/UX
+- ✅ Deployment configurations for Netlify and Vercel
+- ✅ Comprehensive documentation (README, ARCHITECTURE, DEPLOYMENT, API, INTEGRATION)
+- ✅ Build automation and setup scripts
+
+### 🚧 Production Integration Gap
+The frontend currently operates in **demo mode** with mock data to demonstrate functionality. To connect to live Linera operations:
+
+1. **Deploy Smart Contracts**: Follow [DEPLOYMENT.md](docs/DEPLOYMENT.md) to deploy contracts to Linera Testnet
+2. **Setup Backend API**: Use the template in `web/src/app/api/execute-operation/route.ts` to create operation execution endpoint
+3. **Connect Frontend**: Replace mock implementations with real Linera SDK calls per [INTEGRATION.md](docs/INTEGRATION.md)
+4. **Configure Environment**: Set `LINERA_APPLICATION_ID`, `LINERA_CHAIN_ID`, and `LINERA_RPC_ENDPOINT`
+
+**Why this architecture?** Linera's GraphQL service is read-only by design. State mutations require signed operations executed through the Linera SDK for security and consensus. See [INTEGRATION.md](docs/INTEGRATION.md) for complete integration guide with code examples.
+
 ## 🏆 Key Features
 
 ### For the Linera Buildathon
