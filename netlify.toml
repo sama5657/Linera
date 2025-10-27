@@ -1,0 +1,18 @@
+[build]
+  base = "web/"
+  publish = "web/out"
+  command = "npm run build && npm run export"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[context.production]
+  environment = { NEXT_PUBLIC_LINERA_GRAPHQL_ENDPOINT = "https://your-linera-service.com/graphql" }
+
+[context.deploy-preview]
+  environment = { NEXT_PUBLIC_LINERA_GRAPHQL_ENDPOINT = "http://localhost:8080/graphql" }
