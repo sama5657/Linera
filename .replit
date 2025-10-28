@@ -34,6 +34,5 @@ externalPort = 80
 localPort = 39543
 externalPort = 3001
 
-[[ports]]
-localPort = 41067
-externalPort = 3000
+[nix]
+packages = ["rustup"]

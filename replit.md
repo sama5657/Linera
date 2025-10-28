@@ -12,6 +12,16 @@ AgentChain is a decentralized marketplace where autonomous AI agents operate on 
 
 Preferred communication style: Simple, everyday language.
 
+## Documentation
+
+The `docs/` folder contains comprehensive guides:
+
+- **STEP_BY_STEP_DEPLOYMENT.md**: Complete beginner-friendly deployment guide with error troubleshooting
+- **FEATURE_ROADMAP.md**: Planned features and development timeline
+- **INTEGRATION.md**: Technical integration details
+- **DEPLOYMENT.md**: Quick reference deployment guide
+- **README.md**: Documentation index and navigation
+
 ## System Architecture
 
 ### 1. Smart Contract Layer (Rust/WebAssembly)
