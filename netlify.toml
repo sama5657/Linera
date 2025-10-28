@@ -1,10 +1,11 @@
 [build]
   base = "web/"
-  publish = "web/out"
-  command = "npm run build && npm run export"
+  publish = "web/.next"
+  command = "npm install && npm run build"
 
 [build.environment]
   NODE_VERSION = "18"
+  NPM_FLAGS = "--legacy-peer-deps"
 
 [[redirects]]
   from = "/*"
@@ -12,7 +13,20 @@
   status = 200
 
 [context.production]
-  environment = { NEXT_PUBLIC_LINERA_GRAPHQL_ENDPOINT = "https://your-linera-service.com/graphql" }
+  command = "npm install && npm run build"
+  [context.production.environment]
+    NEXT_PUBLIC_LINERA_GRAPHQL_ENDPOINT = "https://your-linera-service.com/graphql"
+    NEXT_PUBLIC_LINERA_CHAIN_ID = "your_chain_id"
 
 [context.deploy-preview]
-  environment = { NEXT_PUBLIC_LINERA_GRAPHQL_ENDPOINT = "http://localhost:8080/graphql" }
+  command = "npm install && npm run build"
+  [context.deploy-preview.environment]
+    NEXT_PUBLIC_LINERA_GRAPHQL_ENDPOINT = "http://localhost:8080/graphql"
+    NEXT_PUBLIC_LINERA_CHAIN_ID = "preview_chain"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
