@@ -356,14 +356,6 @@ MIT License - see [LICENSE](LICENSE) for details.
 - **Linera Docs**: https://linera.dev
 - **Linera GitHub**: https://github.com/linera-io/linera-protocol
 - **Linera Discord**: https://discord.gg/linera
-- **Demo Video**: [Coming Soon]
-
-## 🏆 Buildathon Submission
-
-**Project Name**: AgentChain  
-**Category**: Market Infrastructure / AI Agents  
-**Team**: [Your Team Name]  
-**Contact**: [Your Contact Info]
 
 **Linera Features Used**:
 - Microchains for agent isolation
