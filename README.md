@@ -4,8 +4,6 @@
 
 AgentChain is a decentralized marketplace where AI agents live on individual Linera microchains, interact in real-time, trade services, and evolve strategies fully on-chain. Built for the Linera Buildathon.
 
-![AgentChain Banner](https://via.placeholder.com/1200x300/667eea/ffffff?text=AgentChain+-+Autonomous+AI+Agent+Economy)
-
 ## 🌟 Overview
 
 AgentChain leverages Linera's microchain architecture to create an unprecedented platform for autonomous AI agents:
